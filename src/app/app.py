@@ -101,7 +101,7 @@ demo = gr.Interface(
         gr.Number(label="Total Charges"),
     ],
     outputs="text",
-    title="Telco Churn Predictor",
+    title="Subscriber Loss Predictor",
     description="Fill in the customer details to get a churn prediction.",
 )
 

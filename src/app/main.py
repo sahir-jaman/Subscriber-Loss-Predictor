@@ -2,7 +2,7 @@
 FASTAPI + GRADIO SERVING APPLICATION - Production-Ready ML Model Serving
 ========================================================================
 
-This application provides a complete serving solution for the Telco Customer Churn model
+This application provides a complete serving solution for the Subscriber Loss Predictor model
 with both programmatic API access and a user-friendly web interface.
 
 Architecture:
@@ -18,7 +18,7 @@ from src.serving.inference import predict  # Core ML inference logic
 
 # Initialize FastAPI application
 app = FastAPI(
-    title="Telco Customer Churn Prediction API",
+    title="Subscriber Loss Predictor Prediction API",
     description="ML API for predicting customer churn in telecom industry",
     version="1.0.0"
 )
@@ -176,15 +176,13 @@ demo = gr.Interface(
         gr.Number(label="Total Charges ($)", value=85.0, minimum=0, maximum=10000),
     ],
     outputs=gr.Textbox(label="Churn Prediction", lines=2),
-    title="🔮 Telco Customer Churn Predictor",
+    title="🔮 Subscriber Loss Predictor",
     description="""
-    **Predict customer churn probability using machine learning**
+    **Predicting customer churn probability using machine learning**
     
     Fill in the customer details below to get a churn prediction. The model uses XGBoost trained on 
     historical telecom customer data to identify customers at risk of churning.
     
-    💡 **Tip**: Month-to-month contracts with fiber optic internet and electronic check payments 
-    tend to have higher churn rates.
     """,
     examples=[
         # High churn risk example
