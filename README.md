@@ -1,11 +1,11 @@
-## Telco Churn – End-to-End ML Project
+## Subscriber Loss Predictor– End-to-End ML Project
 ### Purpose
 
-Build and ship a full machine-learning solution for predicting customer churn in a telecom setting—from data prep and modeling to an API + web UI deployed on AWS.
+Build and ship a full machine-learning solution for predicting customer loss in a business setting—from data prep and modeling to an API + web UI deployed on AWS.
 
 ### Problem solved & benefits
 
-- Faster decisions: Predicts which customers are likely to churn so teams can act before they leave.
+- Faster decisions: Predicts which customers are likely to leave so teams can act before they leave.
 - Operationalized ML: Model is accessible via a REST API and a simple UI; anyone can test it without notebooks.
 - Repeatable delivery: CI/CD + containers mean every change can be rebuilt, tested, and redeployed in a consistent way.
 - Traceable experiments: MLflow tracks runs, metrics, and artifacts for reproducibility and auditing.
@@ -23,12 +23,18 @@ Build and ship a full machine-learning solution for predicting customer churn in
 - Security: Security groups scoped to allow ALB inbound 80 from the internet, and task inbound 8000 from the ALB SG.
 - Observability: CloudWatch Logs for container stdout/stderr and ECS service events.
 
+  <img width="1910" height="995" alt="image" src="https://github.com/user-attachments/assets/9fc66478-3eb7-449b-8678-c01be36d8a40" />
+
+
 ### Deployment flow (high-level)
 
 - Push to main → GitHub Actions builds the Docker image and pushes it to Docker Hub.
 - ECS service is updated (manually or via the workflow) to force a new deployment.
 - ALB health checks hit / on port 8000; once healthy, traffic is routed to the new task.
 - Users call POST /predict or open the Gradio UI at /ui via the ALB DNS.
+
+  <img width="1863" height="1005" alt="image" src="https://github.com/user-attachments/assets/b2820a9e-c887-4c2b-bd76-0c6fcbb51551" />
+
 
 ### Roadblocks & how we solved them
 
