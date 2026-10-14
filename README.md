@@ -24,7 +24,7 @@ Build and ship a full machine-learning solution for predicting customer loss in 
 - Observability: CloudWatch Logs for container stdout/stderr and ECS service events.
 
   <img width="1910" height="995" alt="image" src="https://github.com/user-attachments/assets/9fc66478-3eb7-449b-8678-c01be36d8a40" />
-
+  Showing the Output that the customer will likely to leave
 
 ### Deployment flow (high-level)
 
