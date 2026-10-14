@@ -24,7 +24,7 @@ Build and ship a full machine-learning solution for predicting customer loss in 
 - Observability: CloudWatch Logs for container stdout/stderr and ECS service events.
 
   <img width="1910" height="995" alt="image" src="https://github.com/user-attachments/assets/9fc66478-3eb7-449b-8678-c01be36d8a40" />
-  Showing the Output that the customer will likely to leave
+  Image 1: Showing the Output that the customer will likely to leave
 
 ### Deployment flow (high-level)
 
@@ -34,7 +34,7 @@ Build and ship a full machine-learning solution for predicting customer loss in 
 - Users call POST /predict or open the Gradio UI at /ui via the ALB DNS.
 
   <img width="1863" height="1005" alt="image" src="https://github.com/user-attachments/assets/b2820a9e-c887-4c2b-bd76-0c6fcbb51551" />
-
+  Image 2: Screenshot from AWS live server state. 
 
 ### Roadblocks & how we solved them
 
